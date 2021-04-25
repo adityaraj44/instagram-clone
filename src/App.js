@@ -7,7 +7,7 @@ import Modal from "@material-ui/core/Modal";
 import { Input, makeStyles } from "@material-ui/core";
 
 import Button from "@material-ui/core/Button";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+
 import ImageUpload from "./ImageUpload";
 
 function getModalStyle() {
@@ -91,6 +91,25 @@ function App() {
 
     setOpenSignIn(false);
   };
+
+  // service worker
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("./sw.js").then(
+        function (registration) {
+          // Registration was successful
+          console.log(
+            "ServiceWorker registration successful with scope: ",
+            registration.scope
+          );
+        },
+        function (err) {
+          // registration failed :(
+          console.log("ServiceWorker registration failed: ", err);
+        }
+      );
+    });
+  }
 
   return (
     <div className="app">
