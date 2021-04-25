@@ -1,8 +1,9 @@
 .post {
-  max-width: 500px;
+  max-width: 50vw;
   background-color: white;
   border: 1px solid lightgray;
-  margin: 45px 0 45px 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post__image {
@@ -32,13 +33,15 @@
 
 .post__commentBox {
   display: flex;
-  margin-top: 10px;
+  margin: 10px 20px;
+  /* width: 80%; */
 }
 
 .post__input {
   flex: 1;
   border: none;
-  padding: 10px;
+  margin: 10px;
+
   border-top: 1px solid lightgray;
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import firebase from "firebase";
 
 const firebaseApp = firebase.initializeApp({

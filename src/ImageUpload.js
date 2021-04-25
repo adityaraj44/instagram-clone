@@ -4,6 +4,7 @@ import { storage, db } from "./firebase";
 import firebase from "firebase";
 import "./ImageUpload.css";
 import AddIcon from "@material-ui/icons/Add";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 function ImageUpload({ username }) {
   const [image, setImage] = useState(null);
 

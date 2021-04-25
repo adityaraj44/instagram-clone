@@ -1,0 +1,18 @@
+{
+  "short_name": "Snow Club Social Networking",
+  "name": "Snow Club Social Networking",
+  "icons": [
+    {
+      "src": "./SNOWLOGOony.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    }
+  ],
+  
+  "start_url": "./index.html",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "description":"Snow Club Social Networking",
+    "theme_color": "#000",
+    "background_color": "#fff"
+}

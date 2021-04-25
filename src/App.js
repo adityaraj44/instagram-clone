@@ -7,6 +7,7 @@ import Modal from "@material-ui/core/Modal";
 import { Input, makeStyles } from "@material-ui/core";
 
 import Button from "@material-ui/core/Button";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import ImageUpload from "./ImageUpload";
 
 function getModalStyle() {
@@ -99,7 +100,7 @@ function App() {
             <center>
               <img
                 className="app__headerImage"
-                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
+                src="./SNOWLOGOony.png"
                 alt=""
               />
             </center>
@@ -121,7 +122,7 @@ function App() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Button variant="contained" color="secondary" onClick={signUp}>
+            <Button variant="outlined" color="secondary" onClick={signUp}>
               Sign Up
             </Button>
           </form>
@@ -133,7 +134,7 @@ function App() {
             <center>
               <img
                 className="app__headerImage"
-                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
+                src="./SNOWLOGOony.png"
                 alt=""
               />
             </center>
@@ -151,7 +152,7 @@ function App() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Button
-              variant="contained"
+              variant="outlined"
               color="secondary"
               type="submit"
               onClick={signIn}
@@ -164,29 +165,38 @@ function App() {
       <div className="app__header">
         <img
           className="app__headerImage"
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
+          src="./SNOWLOGOony.png"
           alt="headerimg"
         />
 
         {user ? (
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => auth.signOut()}
-          >
-            Logout
-          </Button>
+          <div>
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={() => auth.signOut()}
+            >
+              Logout
+            </Button>
+            <Button
+              variant="outlined"
+              color="primary"
+              href="https://chatcord-snowclub.herokuapp.com/"
+            >
+              Chat Cord
+            </Button>
+          </div>
         ) : (
           <div className="app__loginContainer">
             <Button
-              variant="contained"
+              variant="outlined"
               color="secondary"
               onClick={() => setOpenSignIn(true)}
             >
               Sign In
             </Button>
             <Button
-              variant="contained"
+              variant="outlined"
               color="secondary"
               onClick={() => setOpen(true)}
             >
@@ -214,6 +224,8 @@ function App() {
       ) : (
         <h3 className="default-text">Sorry you need to login to upload</h3>
       )}
+
+      <footer></footer>
     </div>
   );
 }

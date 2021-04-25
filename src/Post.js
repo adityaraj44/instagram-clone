@@ -39,7 +39,7 @@ function Post({ postId, user, username, caption, imageUrl }) {
       <div className="post__header">
         <Avatar
           className="post__avatar"
-          alt="Lucien"
+          alt="post_avatar"
           src="https://unsplash.com/s/photos/random"
         />
         <h4>{username}</h4>
@@ -69,7 +69,7 @@ function Post({ postId, user, username, caption, imageUrl }) {
         />
         <Button
           variant="contained"
-          color="secondary"
+          color="primary"
           className="post__button"
           disabled={!comment}
           type="submit"
