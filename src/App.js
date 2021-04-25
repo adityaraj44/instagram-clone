@@ -3,13 +3,11 @@ import "./App.css";
 import Post from "./Post";
 import { db, auth } from "./firebase";
 import Modal from "@material-ui/core/Modal";
-import DraftsIcon from "@material-ui/icons/Drafts";
+
 import { Input, makeStyles } from "@material-ui/core";
 
 import Button from "@material-ui/core/Button";
 import ImageUpload from "./ImageUpload";
-
-const messengerLink = "https://facebook-messenger-clone-aa2fc.web.app/";
 
 function getModalStyle() {
   const top = 50;
